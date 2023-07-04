@@ -1,0 +1,64 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": ["./tsconfig.json"]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "indent": ["error", 2],
+    "array-bracket-newline": ["error", { "multiline": true }],
+    "array-bracket-spacing": [
+      "error",
+      "always",
+      { "singleValue": false, "objectsInArrays": false, "arraysInArrays": false }
+    ],
+    "arrow-parens": ["error", "as-needed"],
+    "arrow-spacing": "error",
+    "block-spacing": "error",
+    "brace-style": "error",
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "func-call-spacing": ["error", "never"],
+    "key-spacing": ["error", { "afterColon": true }],
+    "keyword-spacing": ["error", { "before": true, "after": true }],
+    "max-len": "off",
+    "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
+    "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+    "no-multiple-empty-lines": "error",
+    "object-curly-newline": ["error", { "multiline": true }],
+    "object-curly-spacing": ["error", "always", { "objectsInObjects": false, "arraysInObjects": false }],
+    "space-before-blocks": "error",
+    "space-before-function-paren": ["error", {"anonymous": "always", "named": "never", "asyncArrow": "always"}],
+    "template-curly-spacing": ["error", "always"],
+    "eqeqeq": ["error", "always"],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "react/destructuring-assignment": [2, "always"],
+    "react/jsx-equals-spacing": [2, "never"],
+    "react/jsx-curly-spacing": [2, {"when": "always", "spacing": { "objectLiterals": "never" }, "children": true }],
+    "react/jsx-pascal-case": [2, { "allowNamespace": true }],
+    "react/jsx-tag-spacing": [2, { "beforeSelfClosing": "always" }],
+    "react/self-closing-comp": [2]
+  }
+}
